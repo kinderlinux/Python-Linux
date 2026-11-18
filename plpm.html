@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>plpm &middot; Python Linux</title>
+<script>document.documentElement.classList.add("js");setTimeout(function(){var t=document.getElementById("theme");if(t)t.media="all";document.body.classList.add("font-in","colors-in","nav-in","cards-in")},8000)</script>
+<link rel="preload" href="minecraft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="boot.css">
+<link id="theme" rel="stylesheet" href="style.css" media="print">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="rotate">
+  <div class="icon">&#128241;</div>
+  <strong>L&uuml;tfen cihazını yatay &ccedil;evir</strong>
+  <span>Bu site yatay ekran i&ccedil;in tasarlandı.</span>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">PYTHON LINUX</a>
+    <div class="links">
+      <a href="index.html">Ana sayfa</a>
+      <a href="neden.html">Neden</a>
+      <a class="active" href="plpm.html">plpm</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <main class="page">
+    <h1>plpm</h1>
+    <p class="intro">Python Linux'un paket y&ouml;neticisi. GitHub'da belirli bir dizine eklediğimiz paketleri alır ve sanal sisteme, orada kurulu bir programmış gibi dahil eder.</p>
+    <div class="rule"></div>
+    <div class="flow">
+      <div class="step">
+        <div class="no">01 / KAYNAK</div>
+        <h3>GitHub dizini</h3>
+        <p>Paketler tek bir dizinde toplanır; kaynak her zaman aynı adrestir.</p>
+      </div>
+      <div class="step">
+        <div class="no">02 / İNDİRME</div>
+        <h3>Paket alınır</h3>
+        <p>plpm istenen paketi bu dizinden indirir ve sanal sistemin i&ccedil;ine yerleştirir.</p>
+      </div>
+      <div class="step">
+        <div class="no">03 / ÇALIŞTIRMA</div>
+        <h3>.venv içinde</h3>
+        <p>Paket, sistem Python'uyla değil kullanıcı dizinindeki <span class="c">pythonlinux/.venv</span> ortamıyla çalışır.</p>
+      </div>
+      <div class="step">
+        <div class="no">04 / KAYIT</div>
+        <h3>Program gibi</h3>
+        <p>Kurulan paket sim&uuml;lat&ouml;r tarafından bir program olarak gör&uuml;l&uuml;r ve sistem listesine eklenir.</p>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <p class="note">Paketler ev dizini dışına yazmaz; sistemin geri kalanı plpm'den etkilenmez.</p>
+    <p><a class="cta" href="neden.html">&larr; Neden Python Linux?</a></p>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    Python Linux &middot; macOS, Windows ve Linux i&ccedil;in Python ile y&ouml;netilen sanal bir sistem. &middot; geliştirme aşamasında
+    <a class="cta" href="https://kinderlinux.github.io">KinderLinux'a d&ouml;n &rarr;</a>
+  </div>
+</footer>
+
+</body>
+</html>

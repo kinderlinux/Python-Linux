@@ -1,0 +1,41 @@
+/* Her zaman yüklü: CSS açılmadan önce de terminal yükleyicisi çalışır. */
+@font-face {
+  font-family: "Minecraft";
+  src: url("minecraft.woff2") format("woff2");
+  font-display: swap;
+}
+:root {
+  --boot-bg: #0b0f14;
+  --boot-fg: #a9b4c2;
+  --boot-bright: #e8eef5;
+  --boot-cyan: #56b6c2;
+  --boot-yellow: #e5c07b;
+  --boot-green: #98c379;
+  --boot-red: #e06c75;
+}
+.term {
+  position: fixed; top: 15px; left: 50%; transform: translateX(-50%);
+  z-index: 200; width: min(875px, calc(100% - 30px));
+  background: var(--boot-bg); color: var(--boot-fg);
+  border: 1px solid #1e2933; border-radius: 10px;
+  padding: 15px 20px;
+  font: 18px/1.8 "Minecraft", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  box-shadow: 0 23px 56px rgba(0,0,0,.55), 0 0 33px rgba(86,182,194,.10);
+}
+.term .line { white-space: pre-wrap; }
+.term .frame { color: var(--boot-red); font-weight: 700; }
+.term .done { color: var(--boot-green); font-weight: 700; }
+.term .info { color: var(--boot-cyan); font-weight: 700; }
+.term .bar { color: var(--boot-green); }
+.term .msg { color: var(--boot-fg); font-size: .88em; }
+.term .active .msg { color: var(--boot-yellow); }
+.term .active .frame { text-shadow: 0 0 13px var(--boot-red); }
+
+.term.ready-mode { text-align: center; }
+.term .ready { color: var(--boot-green); font-weight: 700; letter-spacing: .1em; text-shadow: 0 0 25px rgba(152,195,121,.5); animation: pop .35s ease-out; }
+.term.out { opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+@keyframes pop { from { opacity: 0; transform: scale(.94); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .term .ready { animation: none; }
+  .term.out { transition: none; }
+}
